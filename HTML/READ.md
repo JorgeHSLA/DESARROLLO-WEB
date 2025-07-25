@@ -10,6 +10,7 @@ JavaScript (ES6) code snippets
 # HTML
 index.html : es la pagina principal del proyecto, la pagina por defecto
 
+try
 HTML: sirve para estructurar elementos en la web
 ancor: sirve para generar linkls a otras paginas web
 etiquetas (vienen con atributos por defecto ): 
