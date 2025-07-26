@@ -7,7 +7,7 @@ el archivo de script muestra diferente funcionalidades qeu tiene este lenguaje
 
 ### Variables
 
-(var tiene la misma funcion que let pero es peor porque no respeto scopes let es mejor)
+(var tiene la misma funcion que let pero es peor porque no respeto scopes let es mejor  :)
 
 no son tipadas y son dinamicas
 
@@ -48,6 +48,26 @@ hay dos formas:
 
     arrfinal= primerArr.concat(segArr)
 
+mejor la primera opcion
+
+For each en el mismo arreglo
+
+    arr.forEach(
+        function (element){
+            // cosas que se le quiere hacer a cada elemento del arreglo
+
+        }
+    )
+
+Usando map, lo mismo que el for each pero puede retornar el arreglo modificado
+
+    let arr=map.forEach(
+        function (element){
+            // cosas que se le quiere hacer a cada elemento del arreglo
+
+        }
+    )
+
 ### Condicionales
 
 el if:
@@ -79,7 +99,21 @@ El switch (DEFAULT ES OBLIGATORIO):
 
 ### Ciclos es while, do-while, for
 
-Son iguales a c++ y java
+Son iguales a c++ y java, sin embargo hay unos que cabe explicar mejor.
+
+El forEach con arreglos se explico arriba.
+
+for of (forEach EN OTROS LENGUAJES)  // el mejor de todos
+
+    for (let elemento of arreglo){
+       // hacer algo en ese elemento
+    }
+
+for in, en vez de traer el elemento trae el indice
+
+    for (let indice in arreglo){
+        //hacer algo usando el indice y el elemento del indice
+    }
 
 ### Strings
 
@@ -148,4 +182,6 @@ null, el valor es null
 
 por buenas practicas intentar usar el triple
 
-###
+
+
+## FUNCIONES
