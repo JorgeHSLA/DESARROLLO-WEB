@@ -185,3 +185,65 @@ por buenas practicas intentar usar el triple
 
 
 ## FUNCIONES
+
+Esta es la declaracion de la funcion, se llama igual que en otros lenguajes, pero si la declaras dos veces se vaaa preferir la ultima que colocaste
+
+        // crear la funcion
+
+        function saludar(nombre) {
+            return `Hola, ${nombre}`;
+        }
+
+
+Una buena practica es crear una variable constante como funcion, asi se sabe si ya existe una funcion con ese nombre
+
+    // buena practica para la funcion
+
+    const multiplicar = (a, b) => { // esto es un arrow function
+        return  a * b
+    }
+
+    //o 
+
+    const multiplicar2 = function multi (a, b) {
+        return  a * b
+    }   
+
+
+Se puede mandar una funcion por otra funcion
+
+    // Función como parámetro de otra función
+    function operar(a, b, operacion) {
+        return operacion(a, b);
+    }
+En este ejemplo se le puede mandar diferenetes operaciones a operar, por ejemplo:
+
+    // Uso de la función operar con diferentes operaciones
+    console.log(operar(1, 10, sumar));       
+    console.log(operar(1, 2, multiplicar));
+
+
+### funciones anonimas:
+
+Se usan unicamente donde son declaradas, ejemplo porque es algo abstracto:
+
+
+## Programacion Orientada a Objetos (POO)
+
+Asi se puede crear un objeto, este puede tener funciones y atributos:
+
+    const estudiante = {
+        nombre: "Juan", 
+        apellido: "Perez",
+        edad: 20,
+
+        saludar: function() {
+            return `Hola, soy ${this.nombre} ${this.apellido}`;
+        }
+    }
+
+En JS se pueden agregar atributos de una manera parecida a llave valor, por eejemplo si al extudiante creado anteriormente quiero agregarle un salon se podria hacer asi:
+
+
+estudiante.salon= "1A"
+
