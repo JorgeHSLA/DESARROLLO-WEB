@@ -116,3 +116,51 @@ function Estudiante(nombre, apellido, edad) {
         return `Hola, soy ${this.nombre} ${this.apellido}`;
     };
 }
+
+///////////////////////////////////////////////////////////////
+
+const estudiantes = [
+    { nombre: "Ana", edad: 20 },    
+    { nombre: "Luis", edad: 22 },
+    { nombre: "Marta", edad: 19 }
+];
+
+const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+// Métodos de arreglos
+
+let encontrado = meses.includes("Enero"); // boleano\
+
+// para objetos
+
+let estudianteEncontrado = estudiantes.some((estudiante) => estudiante.nombre === "Ana"); // boleano
+
+//encontrar indice de un elemento
+let indice = meses.indexOf("Enero"); // devuelve el indice del elemento
+
+//encontrar indice de un objeto
+let indiceEstudiante = estudiantes.findIndex((estudiante) => estudiante.nombre === "Ana");
+
+//sumar valores de un arreglo
+let suma = estudiantes.reduce((acumulador, estudiante) => acumulador + estudiante.edad, 0); // devuelve la suma de las edades
+
+//filtrar elementos de un arreglo
+let mayoresDe20 = estudiantes.filter((estudiante) => estudiante.edad > 20); // devuelve un arreglo con los estudiantes mayores de 20
+
+//buscar algo en la lista
+let estudianteBuscado = estudiantes.find((estudiante) => estudiante.nombre === "Ana"); //devuelve el primer estudiante que cumple la condición
+
+class Empleado{
+
+    constructor(nombre, apellido, salario) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.salario = salario;
+
+
+    }
+
+    saludar() {
+        return `Hola, soy ${this.nombre} ${this.apellido} y mi salario es ${this.salario}`;
+    }
+}

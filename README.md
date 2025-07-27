@@ -262,7 +262,7 @@ sirve para sacar propiedades de un objeto en vez de constantemente llamar a un o
 
     console.log(`el estudiante tiene ${edad} y su apellido es ${apellido}`); 
 
-### <span style="color: #00ffddff ">CLASES</span> 
+### <span style="color: #00ffddff ">Objeto definido</span> 
 
 Se crea un constructor:
 
@@ -278,5 +278,141 @@ Se crea un constructor:
 
     const estudianteConConstructor = new Estudiante(paco, paquisimo, 22)
 
+La herencia esta mas adelante porque primero se deben ver otros terminos
+
+
 ### <span style="color: #e091b9ff ">METODOS DE ARREGLOS</span> 
+
+METODOS QUE PUEDEN AYUDAR:
+
+
+    const estudiantes = [
+        { nombre: "Ana", edad: 20 },    
+        { nombre: "Luis", edad: 22 },
+        { nombre: "Marta", edad: 19 }
+    ];
+
+    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+    // Métodos de arreglos
+
+    let encontrado = meses.includes("Enero"); // boleano\
+
+    // para objetos
+
+    let estudianteEncontrado = estudiantes.some((estudiante) => estudiante.nombre === "Ana"); // boleano
+
+    //encontrar indice de un elemento
+    let indice = meses.indexOf("Enero"); // devuelve el indice del elemento
+
+    //encontrar indice de un objeto
+    let indiceEstudiante = estudiantes.findIndex((estudiante) => estudiante.nombre === "Ana");
+
+    //sumar valores de un arreglo
+    let suma = estudiantes.reduce((acumulador, estudiante) => acumulador + estudiante.edad, 0); // devuelve la suma de las edades
+
+    //filtrar elementos de un arreglo
+    let mayoresDe20 = estudiantes.filter((estudiante) => estudiante.edad > 20); // devuelve un arreglo con los estudiantes mayores de 20
+
+    //buscar algo en la lista
+    let estudianteBuscado = estudiantes.find((estudiante) => estudiante.nombre === "Ana"); //devuelve el primer estudiante que cumple la condición
+
+
+### <span style="color: #00ffddff ">PROTOTIPOS</span> 
+
+la forma correcta de asignar metodos y funciones a las clases para optimizar la memoria.
+
+    Clase.prototype.accion = function() {
+        //contenido
+    }
+
+### <span style="color: #00ffddff ">HERENCIA</span> 
+
+La herencia es un poco diferente a lo acostumbrado en diferentes lenguajes
+
+En este caso es para heredar los atributos del padre
+
+    function Gatito (nombre, raza, edad, color){ 
+        Gato.call(this, nombre, raza, edad)     //llama al padre y le manda los atributos, si o si debe tener el this
+        this.color = color
+
+    }
+
+En este caso es para heredar los prototipos del padre
+
+    Gatito.prototype = Object.create(Gato.prototype)
+
+
+### <span style="color: #00ffddff ">CLASES</span> 
+
+las clases usan por debajo los prototuipos, por ende es una buena opcion para que sea mas legible el codigo
+
+    class Empleado{
+
+        constructor(nombre, apellido, salario) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.salario = salario;
+
+
+        }
+
+        saludar() {
+            return `Hola, soy ${this.nombre} ${this.apellido} y mi salario es ${this.salario}`;
+        }
+    }
+
+La herencia en las clases si es parecida a java:
+
+    class Desarrollador extends Empleado {
+        constructor(nombre, apellido, salario, lenguaje) {
+            super(nombre, apellido, salario);
+            this.lenguaje = lenguaje;
+        }
+
+        static bienvenido() {
+            console.log("Bienvenido al curso de JavaScript");
+        }
+    }
+
+
+### <span style="color: #00ffddff ">ENCAPSULAMIENTO</span>
+
+Para un atributo privado se le agrega el #
+
+    #atributo
+
+Hay get y set, sin embargo se usan palabras reservadas, como ejemplo:
+
+    get nombre() {
+        return this.#nombre;
+    }
+
+    set nombre(nuevoNombre) {
+        this.#nombre = nuevoNombre;
+    }
+
+El encapsulamiento es una buena práctica cuando:
+
+
+
+#### <span style="color: #fffb00ff ">TEORIA DEL ENCAPSULAMIENTO</span>
+Quieres proteger los atributos internos de una clase para evitar que sean modificados directamente desde fuera.
+
+- Necesitas controlar o validar los valores antes de asignarlos (por ejemplo, usando un setter para validar datos).
+
+- Planeas cambiar la implementación interna en el futuro sin afectar el código que usa la clase.
+
+- Quieres mantener una interfaz clara y segura para los usuarios de tu clase.
+
+Es mala práctica o innecesario cuando:
+
+- El atributo es completamente público y no necesitas control ni validación sobre su acceso o modificación.
+
+- El encapsulamiento agrega complejidad innecesaria a clases muy simples o de uso interno.
+
+- Usas getters y setters que solo exponen el atributo sin agregar lógica extra, haciendo el código más largo sin beneficio real.
+
+Resumen:
+Usa encapsulamiento cuando aporta seguridad, control o flexibilidad. Evítalo si solo complica el código sin aportar valor.
 
