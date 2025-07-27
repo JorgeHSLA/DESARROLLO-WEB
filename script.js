@@ -60,3 +60,59 @@ prueba.endsWith("b");
 `esto puede ser una cadena de texto
 con varias lineas
 y con variables`
+
+// crear la funcion
+
+function saludar(nombre) {
+    return `Hola, ${nombre}`;
+}
+
+// buena practica para la funcion
+
+const multiplicar = function multisisao (a, b){
+    return  a * b
+}
+
+// Función como parámetro de otra función
+function operar(a, b, operacion) {
+    return operacion(a, b);
+}
+
+// Ejemplo de funciones para operar
+function sumar(x, y) {
+    return x + y;
+}
+
+// Uso de la función operar con diferentes operaciones
+console.log(operar(1, 10, sumar));         // 11
+console.log(operar(1, 2, multiplicar));
+
+let resultado = restar(1, 2, function(x, y) {
+    return x - y;
+});
+
+const estudiante = {
+    nombre: "Juan", 
+    apellido: "Perez",
+    edad: 20,
+    saludar: function() {
+        return `Hola, soy ${this.nombre} ${this.apellido}`;
+    }
+}
+
+estudiante.salon= "1A"
+
+const {edad,apellido} = estudiante;
+
+console.log(`el estudiante tiene ${edad} y su apellido es ${apellido}`); 
+
+
+
+function Estudiante(nombre, apellido, edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.saludar = function() {
+        return `Hola, soy ${this.nombre} ${this.apellido}`;
+    };
+}
