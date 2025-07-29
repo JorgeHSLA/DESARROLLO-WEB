@@ -82,3 +82,6 @@ box-sizing: border-box, hace que el tamanio de las cajas cuenten el borde, asi s
 ## HTML5
 
 agregaron equitecas semanticas, como header, section, flutter, main y article (sobre todo para obejetos pequenios que tienen info por si solos, como una card) que mas que funcionalidades representan es orden, trabajan como un div sin embargo es buena practica usar estos, se genera un codigo mas limpio, esto ayuda a motores de busqueda
+
+
+Para ejemplo practico esta el taller 1 : https://github.com/JorgeHSLA/Taller1DesarrolloWeb
