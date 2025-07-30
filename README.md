@@ -416,3 +416,11 @@ Es mala práctica o innecesario cuando:
 Resumen:
 Usa encapsulamiento cuando aporta seguridad, control o flexibilidad. Evítalo si solo complica el código sin aportar valor.
 
+
+# JS en el HTML
+
+El archivo java script como buena practica se debe agregar al final del html:
+
+<img width="280" height="71" alt="image" src="https://github.com/user-attachments/assets/ba599dbc-1b8c-43bc-8685-db061710a092" />
+
+
