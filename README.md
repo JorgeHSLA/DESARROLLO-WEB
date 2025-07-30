@@ -483,9 +483,24 @@ En esta imagne se ve como se mueve a hermanos, padres, e hijos ademas de elimina
 
 <img width="509" height="356" alt="image" src="https://github.com/user-attachments/assets/5c5100a6-13ce-4e73-8fa9-1b5b721049f6" />
 
+### Para agregar hijos al arbol:
 
+se puede de dos maneras:
 
+<img width="401" height="258" alt="image" src="https://github.com/user-attachments/assets/541d3110-d4cc-45de-b90e-4c3e5a77de0d" />
 
+y
+
+<img width="392" height="123" alt="image" src="https://github.com/user-attachments/assets/af35422e-494d-43cf-bcb4-73535c215011" />
+
+## Dataset, indicador unico para diferenciar elementos:
+ ejemplo con boton:
+ en el html:
+ <img width="256" height="120" alt="image" src="https://github.com/user-attachments/assets/db118b74-100d-47ea-843e-670c7276ca80" />
+ en el JS:
+ <img width="129" height="29" alt="image" src="https://github.com/user-attachments/assets/2dba2a48-ae95-45d6-a4d3-67461b582147" />
+
+ Podemos ver que en html se hace data-atributo y en el JS objeto.dataset.atributo
 # Botones
  Asi se llama para hacer click
  
