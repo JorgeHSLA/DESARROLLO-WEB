@@ -364,7 +364,7 @@ las clases usan por debajo los prototuipos, por ende es una buena opcion para qu
 
 La herencia en las clases si es parecida a java:
 
-    class Desarrollador extends Empleado {
+     class Desarrollador extends Empleado {
         constructor(nombre, apellido, salario, lenguaje) {
             super(nombre, apellido, salario);
             this.lenguaje = lenguaje;
@@ -422,5 +422,20 @@ Usa encapsulamiento cuando aporta seguridad, control o flexibilidad. Evítalo si
 El archivo java script como buena practica se debe agregar al final del html:
 
 <img width="280" height="71" alt="image" src="https://github.com/user-attachments/assets/ba599dbc-1b8c-43bc-8685-db061710a092" />
+
+
+## DOM
+
+Arbol que expresa el codigo que escribimos.
+
+El nodo raiz de la pagina es document, y con este podemos entrar a cualquier rama de nuestra pagina:
+<img width="404" height="248" alt="image" src="https://github.com/user-attachments/assets/6f75109b-0819-40fa-b038-4985713cea0e" />
+
+
+## Traer objetos
+
+### Por ID
+
+    const canciones = document.getElementById("idQueQueremos")
 
 
