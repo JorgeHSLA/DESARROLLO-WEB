@@ -436,6 +436,9 @@ El nodo raiz de la pagina es document, y con este podemos entrar a cualquier ram
 
 ### Por ID
 
-    const canciones = document.getElementById("idQueQueremos")
+    const objeto = document.getElementById("idQueQueremos")
+El html se puede modificar desde JS usando:
+
+    cbjeto.InnerHTML = " lo que quieras poner para reemplazar el html ya existente "
 
 
