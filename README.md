@@ -481,4 +481,7 @@ se usa style y luego de un punto la variable de css
 # Botones
  Asi se llama para hacer click
  <img width="412" height="125" alt="image" src="https://github.com/user-attachments/assets/be5d4293-168c-4428-b8f3-099e179b20ac" />
+ asi para deteccion del mause
+ <img width="377" height="246" alt="image" src="https://github.com/user-attachments/assets/d32fccd8-535c-4f1c-b486-48af3daaff36" />
+
 
