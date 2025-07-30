@@ -479,8 +479,11 @@ se usa style y luego de un punto la variable de css
     objeto.add("claseQueSeQuieraAgregar")
 
 ## Explorar el arbol de DOM
-En esta imagne se ve como se mueve a hermanos, padres, e hijos
-<img width="480" height="256" alt="image" src="https://github.com/user-attachments/assets/8a0c8f32-ae12-4655-bef9-c3a16f44e470" />
+En esta imagne se ve como se mueve a hermanos, padres, e hijos ademas de eliminar uno:
+
+<img width="509" height="356" alt="image" src="https://github.com/user-attachments/assets/5c5100a6-13ce-4e73-8fa9-1b5b721049f6" />
+
+
 
 
 # Botones
