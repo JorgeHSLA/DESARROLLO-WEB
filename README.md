@@ -437,8 +437,33 @@ El nodo raiz de la pagina es document, y con este podemos entrar a cualquier ram
 ### Por ID
 
     const objeto = document.getElementById("idQueQueremos")
+
+### Por tag
+
+    const objeto = document.getElementsByTagName("TagQueQueremos")
+
+### Por Clase
+
+    const listaDeObjetos = document.getElementsByClassName("ClassQueQueremos")
+
+### querySelector
+ Este sirve para buscar tanto ID, como Tag, como Clase usando nomenclatura de CSS
+
+    const objeto = document.querySelector(".clase / #id / tag (aqui dentro tambien funciona la herencia y las , de CSS)")
+
+se usa querySelectorAll cuando hay muchos
+
+## Modificar html de los objetos
+
 El html se puede modificar desde JS usando:
 
-    cbjeto.InnerHTML = " lo que quieras poner para reemplazar el html ya existente "
+    objeto.InnerHTML = " lo que quieras poner para reemplazar el html ya existente "
 
+El InnerHTML tambien tiene ciertos metodos que ayudan al programador:
 
+    // todos los texto dentro de objeto pasaran a ser mayusculas
+    objeto.InnerHTML.ToUpperCase();
+    
+## Modificar style (CSS) de objetos
+    // hace que las fuentes del objeto se pongan en negrila
+    objeto.style.fontWeight = "bold"
