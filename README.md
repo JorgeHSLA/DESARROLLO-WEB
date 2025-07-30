@@ -463,7 +463,13 @@ El InnerHTML tambien tiene ciertos metodos que ayudan al programador:
 
     // todos los texto dentro de objeto pasaran a ser mayusculas
     objeto.InnerHTML.ToUpperCase();
-    
+ 
 ## Modificar style (CSS) de objetos
+
+se usa style y luego de un punto la variable de css
     // hace que las fuentes del objeto se pongan en negrila
     objeto.style.fontWeight = "bold"
+
+## Modificar src de objetos
+
+   objeto.src= "/nueva ruta"
