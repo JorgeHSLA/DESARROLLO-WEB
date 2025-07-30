@@ -467,9 +467,18 @@ El InnerHTML tambien tiene ciertos metodos que ayudan al programador:
 ## Modificar style (CSS) de objetos
 
 se usa style y luego de un punto la variable de css
+
     // hace que las fuentes del objeto se pongan en negrila
     objeto.style.fontWeight = "bold"
 
 ## Modificar src de objetos
 
-   objeto.src= "/nueva ruta"
+    objeto.src= "/nueva ruta"
+## Agregar cualidades
+
+    objeto.add("claseQueSeQuieraAgregar")
+    
+# Botones
+ Asi se llama para hacer click
+ <img width="412" height="125" alt="image" src="https://github.com/user-attachments/assets/be5d4293-168c-4428-b8f3-099e179b20ac" />
+
