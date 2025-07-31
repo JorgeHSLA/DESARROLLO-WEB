@@ -99,3 +99,7 @@ existe preventDefault(), para evitar que se lance el sumbit y se pone ahi
 Este action es para mandar datos a un servidor
 
      action= "tercero"
+
+## method en el html del form
+
+     method = "post"/ "get"
