@@ -93,3 +93,7 @@ para validar el sumbit se pone:
 
 
 existe preventDefault(), para evitar que se lance el sumbit y se pone ahi
+
+## action en el html del form
+
+Este action es para mandar datos a un servidor
