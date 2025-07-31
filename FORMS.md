@@ -81,3 +81,15 @@ A continuacion estare un codigo de los formatos y este estara comentado:
         <button type="submit">Enviar</button>
       </fieldset>
     </form>
+
+## Importante
+
+para validar el sumbit se pone:
+
+     form.addEventListener("sumbit",(e) => {
+       //contenido
+
+     })
+
+
+existe preventDefault(), para evitar que se lance el sumbit y se pone ahi
