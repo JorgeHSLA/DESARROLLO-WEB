@@ -14,3 +14,15 @@
 # Thymeleaf 
 
 Sirve para la union entre HTML y java
+
+para poder pasar data de java al html el html debe tener en la wetiqueta html:
+
+        <!DOCTYPE html>
+        <html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+
+# beans
