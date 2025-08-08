@@ -29,3 +29,4 @@ para poder pasar data de java al html el html debe tener en la wetiqueta html:
 # beans y inyeccion de dependencias
 
 - El bean es un objeto global, este vive en springboot, cuando alguien quiere 
+- El autowired no es tan bueno como parece, es mejor con constructor pasar los beans
