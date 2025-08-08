@@ -10,3 +10,7 @@
     - @Configuration: beans
     - @EnableAutoConfiguration: leer la dependencias del POM
     - @ComponentScan: genera cosas automaticamente (no haces new)
+
+# Thymeleaf 
+
+Sirve para la union entre HTML y java

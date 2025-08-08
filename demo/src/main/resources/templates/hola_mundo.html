@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>¡Hola MUNDOOO!</title>
+    <style>
+      :root{
+        --bg1: #ff9a9e;
+        --bg2: #fad0c4;
+        --card: rgba(255,255,255,0.9);
+        --accent: #ff6f61;
+      }
+      *{box-sizing:border-box}
+      html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+      body{
+        display:grid;place-items:center;
+        background:linear-gradient(135deg,var(--bg1),var(--bg2));
+        overflow:hidden;
+      }
+      .stage{
+        width:min(900px,94vw);
+        padding:3rem;
+        background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.78));
+        border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.12);
+        text-align:center; position:relative; backdrop-filter: blur(6px);
+      }
+      h1{
+        margin:0 0 .4rem; font-size:clamp(2.2rem,6vw,4.2rem); letter-spacing:-0.02em;
+        color: #3b2b2b;
+      }
+      p.lead{margin:0 0 1.4rem;color:#5a4a4a;font-size:1.1rem}
+      .card-accent{
+        display:inline-flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:999px;
+        background:linear-gradient(90deg, rgba(255,111,97,0.14), rgba(255,111,97,0.06));
+        border:1px solid rgba(255,111,97,0.12);
+        font-weight:600;color:var(--accent)
+      }
+      .btn{
+        display:inline-block;margin-top:1.2rem;padding:.7rem 1.1rem;border-radius:12px;border:0;cursor:pointer;font-weight:700;
+        background:linear-gradient(90deg,var(--accent),#ff8a66);color:white;box-shadow:0 6px 18px rgba(255,111,97,0.18);
+        transform:translateY(0);transition:transform .18s ease, box-shadow .18s;
+      }
+      .btn:active{transform:translateY(2px);box-shadow:0 3px 10px rgba(0,0,0,0.12)}
+
+      /* Floating shapes for fun */
+      .floaty{
+        position:absolute;pointer-events:none;opacity:.95;
+        animation:float 7s ease-in-out infinite;
+      }
+      .floaty.s1{width:88px;height:88px;border-radius:14px;left:6%;top:8%;background:rgba(255,255,255,0.18);transform:rotate(12deg)}
+      .floaty.s2{width:56px;height:56px;border-radius:50%;right:8%;top:16%;background:rgba(255,255,255,0.12);animation-duration:9s}
+      .floaty.s3{width:120px;height:80px;border-radius:36px;right:6%;bottom:12%;background:rgba(255,255,255,0.08);animation-duration:10s}
+      .floaty.s4{left:12%;bottom:6%;width:64px;height:64px;border-radius:18px;background:rgba(255,255,255,0.1);animation-duration:8s}
+      @keyframes float{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(6deg)}100%{transform:translateY(0) rotate(0)}}
+
+      /* subtle confetti using pseudo elements */
+      .confetti{position:absolute;inset:0;pointer-events:none}
+      .confetti span{position:absolute;display:block;width:8px;height:16px;opacity:0;transform-origin:center;animation:confetti-fall linear infinite}
+      @keyframes confetti-fall{
+        0%{opacity:1;transform:translateY(-10vh) rotate(0) scale(1)}
+        100%{opacity:0;transform:translateY(110vh) rotate(540deg) scale(.9)}
+      }
+      /* generate a few confetti pieces at different positions */
+      .confetti span:nth-child(1){left:6%; animation-duration:4.6s; animation-delay:0s;background:#ffd166}
+      .confetti span:nth-child(2){left:14%; animation-duration:5.2s; animation-delay:.15s;background:#06d6a0}
+      .confetti span:nth-child(3){left:22%; animation-duration:4.9s; animation-delay:.3s;background:#118ab2}
+      .confetti span:nth-child(4){left:32%; animation-duration:5.6s; animation-delay:.1s;background:#ef476f}
+      .confetti span:nth-child(5){left:42%; animation-duration:4.7s; animation-delay:.4s;background:#ffd166}
+      .confetti span:nth-child(6){left:52%; animation-duration:5.1s; animation-delay:.25s;background:#06d6a0}
+      .confetti span:nth-child(7){left:62%; animation-duration:5.8s; animation-delay:.05s;background:#118ab2}
+      .confetti span:nth-child(8){left:72%; animation-duration:5.4s; animation-delay:.33s;background:#ef476f}
+      .confetti span:nth-child(9){left:82%; animation-duration:4.8s; animation-delay:.2s;background:#ffd166}
+      .confetti span:nth-child(10){left:92%; animation-duration:5.3s; animation-delay:.12s;background:#06d6a0}
+
+      footer{margin-top:1.4rem;color:#6b5a5a;font-size:.9rem}
+
+      @media (max-width:520px){
+        .stage{padding:2rem;border-radius:16px}
+        h1{font-size:2.4rem}
+      }
+    </style>
+  </head>
+  <body>
+    <main class="stage" role="main">
+      <div class="floaty s1"></div>
+      <div class="floaty s2"></div>
+      <div class="floaty s3"></div>
+      <div class="floaty s4"></div>
+
+      <h1>¡HOLAAA <span style="color:var(--accent)">MUNDOO</span>!</h1>
+      <p class="lead">Que tu día esté lleno de pequeños momentos que te hagan sonreír. 🌟</p>
+
+      <div class="card-accent">Un mensajito bonito para una prueba ✨</div>
+
+      <div>
+        <button class="btn" onclick="surprise()">Haz clic para una sorpresa</button>
+      </div>
+
+      <div class="confetti" aria-hidden="true">
+        <!-- confetti pieces -->
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <footer>Prueba HTML — creado con cariño</footer>
+    </main>
+
+    <script>
+      function surprise(){
+        // a tiny playful surprise: toggle a quick scale pulse on the heading
+        const h = document.querySelector('h1');
+        h.animate([
+          {transform: 'scale(1)', offset:0},
+          {transform: 'scale(1.08)', offset:0.5},
+          {transform: 'scale(1)', offset:1}
+        ],{duration:420, easing:'ease-out'});
+      }
+    </script>
+  </body>
+</html>
