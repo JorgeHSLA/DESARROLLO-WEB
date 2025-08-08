@@ -26,4 +26,6 @@ para poder pasar data de java al html el html debe tener en la wetiqueta html:
             <title>Document</title>
         </head>
 
-# beans
+# beans y inyeccion de dependencias
+
+- El bean es un objeto global, este vive en springboot, cuando alguien quiere 
