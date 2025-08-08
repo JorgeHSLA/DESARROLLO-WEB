@@ -2,6 +2,7 @@
 
 - Carpeta templates tiene los html que se usaran
 - properties, configurar el servicio
+- Carpeta de static, es donde va la carpeta images, css, JS
 
 # anotaciones:
 
