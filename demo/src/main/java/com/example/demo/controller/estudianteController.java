@@ -28,7 +28,6 @@ public class EstudianteController {
 
     @GetMapping("/{id}")
     public String getMethodName(Model model, @PathVariable("id") Integer id) {
-
         Estudiante estudiante = estudianteService.findById(id);
         model.addAttribute("estudiante", estudiante);
         return "estudiante";
