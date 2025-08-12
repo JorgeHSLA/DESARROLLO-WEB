@@ -30,3 +30,12 @@ para poder pasar data de java al html el html debe tener en la wetiqueta html:
 
 - El bean es un objeto global, este vive en springboot, cuando alguien quiere 
 - El autowired no es tan bueno como parece, es mejor con constructor pasar los beans
+
+
+# info que no esta de mas
+
+- cuando es un nuevo objeto se le asigna un id nulo porque la database se lo asigna
+
+# Logger
+
+- Looger sirve para  lanzar logs de manera limpia y usando buenas practicas
