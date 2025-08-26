@@ -10,6 +10,8 @@ import com.example.demo.service.EstudianteServiceImplementation;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 
@@ -58,5 +60,15 @@ public class EstudianteController {
          
          return "estudiantes";
      }
+
+    //@GetMapping(params = "id")
+    //public String getEstudianteInfo(Model model,@RequestParam("id") Integer id) {
+    //
+    //    Estudiante estudiante = estudianteService.findById(id);
+    //    model.addAttribute("estudiante", estudiante);
+    //    return "estudiante";
+    //
+    //}
+         
      
 }
